@@ -21,7 +21,7 @@ a = 0;
 }
 else
 {
-for (a = 0; s1[a]; a++);
+for (a = 0; s1[a]; a++)
 }
 if (s2 == NULL)
 {
@@ -29,8 +29,7 @@ y = 0;
 }
 else
 {
-
-	for (b = 0; s2[b]; b++);
+for (b = 0; s2[b]; b++)
 }
 if (b > n)
 b = n;
