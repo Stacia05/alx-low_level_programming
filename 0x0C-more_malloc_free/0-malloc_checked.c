@@ -15,4 +15,5 @@ t = malloc(b);
 if (t == NULL)
 exit(98);
 return (t);
+free(t);
 }
