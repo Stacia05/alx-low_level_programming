@@ -2,47 +2,38 @@
 #include "main.h"
 
 /**
-* string_nconcat - a function that concatenates two strings.
-* *s - pointer to the allocated memory
-* @s1: the first char
-* @s2: the second char
-* @n: unsigned int
+* string_nconcat - a function that concatenates two strings
 *
-* Return: If the function fails, return NULL
+* s - pointer to the allocated memory
+* @s1:the first input
+* @s2: the second input
+* Return: concat of s1 and concat of s2, NULL if the function fails
 */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-
 {
-unsigned int a, b, c;
 char *s;
+unsigned int a, b, c, i;
 if (s1 == NULL)
-{
-a = 0;
-}
-else
-{
-for (a = 0; s1[a]; a++)
-}
+s1 = "";
 if (s2 == NULL)
-{
-b = 0;
-}
-else
-{
-for (b = 0; s2[b]; b++)
-}
-if (b > n)
-b = n;
-s = malloc(sizeof(char) * (a + b + 1));
-
+s2 = "";
+for (a = 0; s1[a] != '\0'; a++)
+	;
+for (b = 0; s2[b] != '\0'; b++)
+	;
+if (n > b)
+n = b;
+c = a + n;
+s = malloc(c + 1);
 if (s == NULL)
 return (NULL);
-for (c = 0; c < a; c++)
-s[c] = s1[c];
-for (c = 0; c < b; c++)
-s[c + a] = s2[c];
-s[a + b] = '\0';
+for (i = 0; i < c; i++)
+if (i < a)
+s[i] = s1[i];
+else
+s[i] = s2[i - a];
+s[i] = '\0';
 return (s);
 free(s);
 }
