@@ -1,8 +1,9 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
 * string_nconcat - a function that concatenates two strings.
-*
+* *s - pointer to the allocated memory
 * @s1: the first char
 * @s2: the second char
 * @n: unsigned int
@@ -43,4 +44,5 @@ for (c = 0; c < b; c++)
 s[c + a] = s2[c];
 s[a + b] = '\0';
 return (s);
+free(s);
 }
