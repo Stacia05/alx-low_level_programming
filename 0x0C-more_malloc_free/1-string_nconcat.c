@@ -25,7 +25,7 @@ for (a = 0; s1[a]; a++)
 }
 if (s2 == NULL)
 {
-y = 0;
+b = 0;
 }
 else
 {
