@@ -3,11 +3,11 @@
 #include "dog.h"
 
 /**
-* init_dog - prints a struct dog
+* print_dog - prints a struct dog
 * @d: struct dog to print
 */
 
-void init_dog
+void print_dog
 {
 struct dog *d;
 char *name;
